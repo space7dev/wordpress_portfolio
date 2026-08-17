@@ -1,0 +1,20 @@
+<section class="section reference-section skills-section" id="skills" aria-labelledby="skills-title">
+  <div class="shell">
+    <header class="reference-heading reference-heading--center scroll-reveal">
+      <p class="eyebrow">Core expertise</p>
+      <h2 id="skills-title">Tools of the <span>trade.</span></h2>
+    </header>
+    <div class="skill-filters" role="group" aria-label="Filter skills" data-skill-filters>
+      <button class="is-active" type="button" data-skill-filter="all" aria-pressed="true">All</button>
+      <button type="button" data-skill-filter="platform" aria-pressed="false">WordPress</button>
+      <button type="button" data-skill-filter="code" aria-pressed="false">Code</button>
+      <button type="button" data-skill-filter="data" aria-pressed="false">Data &amp; APIs</button>
+      <button type="button" data-skill-filter="design" aria-pressed="false">Design</button>
+      <button type="button" data-skill-filter="workflow" aria-pressed="false">Workflow</button>
+    </div>
+    <div class="skill-cloud" data-skill-grid>
+      <% skills.forEach((skill) => { %><%- include('../partials/skill-card', { skill }) %><% }) %>
+    </div>
+  </div>
+</section>
+<script src="/js/skill-filter.js" defer></script>

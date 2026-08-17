@@ -1,0 +1,13 @@
+<article class="glass-panel project-card scroll-reveal" data-project-card data-type="<%= project.category %>">
+  <a class="project-card__screenshot" href="/work/<%= project.slug %>" tabindex="-1" aria-hidden="true">
+    <img src="<%= project.screenshot %>" alt="" width="1200" height="800" loading="lazy">
+  </a>
+  <div class="project-card__details">
+  <div class="experience-date"><%= project.year %></div>
+  <p class="project-label"><%= project.type %></p>
+  <h3><%= project.title %></h3>
+  <p><%= project.summary %></p>
+  <div class="project-card__stack"><% project.stack.slice(0, 4).forEach((item) => { %><span><%= item %></span><% }) %></div>
+  <a class="neon-button neon-button--small" href="/work/<%= project.slug %>" aria-label="Read the <%= project.title %> case study">View case study <span aria-hidden="true">↗</span></a>
+  </div>
+</article>

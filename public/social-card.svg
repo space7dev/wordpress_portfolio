@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f3f0e8"/>
+  <circle cx="965" cy="315" r="210" fill="#c7f04b" stroke="#171816" stroke-width="5"/>
+  <circle cx="965" cy="315" r="265" fill="none" stroke="#171816" stroke-dasharray="8 16"/>
+  <text x="965" y="385" text-anchor="middle" fill="#171816" font-family="Georgia" font-size="220">W</text>
+  <text x="90" y="145" fill="#171816" font-family="Arial" font-size="28" font-weight="700" letter-spacing="4">SENIOR WORDPRESS DEVELOPER</text>
+  <text x="90" y="295" fill="#171816" font-family="Arial" font-size="78" font-weight="700">WordPress,</text>
+  <text x="90" y="385" fill="#65675f" font-family="Georgia" font-size="82" font-style="italic">crafted differently.</text>
+  <text x="90" y="520" fill="#65675f" font-family="Arial" font-size="30">Strategy · Design · Development</text>
+</svg>

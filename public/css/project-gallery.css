@@ -1,0 +1,74 @@
+.project-card {
+  display: flex;
+  min-height: 580px;
+  padding: 0;
+  flex-direction: column;
+}
+
+.project-card::after {
+  z-index: 0;
+  bottom: -20%;
+}
+
+.project-card__screenshot {
+  position: relative;
+  z-index: 2;
+  display: block;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border-bottom: 1px solid var(--glass-line);
+  background: #111;
+}
+
+.project-card__screenshot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform .6s cubic-bezier(.16, 1, .3, 1);
+}
+
+.project-card:hover .project-card__screenshot img {
+  transform: scale(1.035);
+}
+
+.project-card__details {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-height: 320px;
+  padding: 2rem;
+  flex: 1;
+  flex-direction: column;
+}
+
+.project-card__details .experience-date {
+  top: 2rem;
+  right: 2rem;
+}
+
+.project-card__details > p:not(.project-label) {
+  color: var(--dim);
+}
+
+.case-screenshot {
+  min-height: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--glass-line);
+  border-radius: 16px;
+  background: #111;
+}
+
+.case-screenshot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 680px) {
+  .project-card { min-height: 520px; }
+  .project-card__details { min-height: 300px; padding: 1.5rem; }
+  .project-card__details .experience-date { top: 1.5rem; right: 1.5rem; }
+}
+

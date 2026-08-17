@@ -1,0 +1,18 @@
+@keyframes caret { 0%,48% { opacity: 1; } 49%,100% { opacity: 0; } }
+@keyframes float-card { 0%,100% { translate: 0 0; } 50% { translate: 0 -16px; } }
+@keyframes preloader-word { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes preloader-fallback { to { visibility: hidden; opacity: 0; } }
+@keyframes pulse-ring { 0% { box-shadow: 0 0 0 0 rgba(168,85,247,.55); } 70% { box-shadow: 0 0 0 12px rgba(168,85,247,0); } 100% { box-shadow: 0 0 0 0 rgba(168,85,247,0); } }
+
+.scroll-reveal { opacity: 0; filter: blur(8px); transform: translateY(42px) scale(.98); transition: opacity .8s cubic-bezier(.16,1,.3,1), filter .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
+.scroll-reveal.is-visible { opacity: 1; filter: blur(0); transform: translateY(0) scale(1); }
+.project-grid .scroll-reveal:nth-child(2n), .skill-cloud .scroll-reveal:nth-child(2n) { transition-delay: .08s; }
+.project-grid .scroll-reveal:nth-child(3n), .skill-cloud .scroll-reveal:nth-child(3n) { transition-delay: .16s; }
+.glass-panel { transition: border-color .3s ease, box-shadow .3s ease, transform .3s ease; }
+.glass-panel:hover { border-color: rgba(192,132,252,.45); box-shadow: 0 20px 60px rgba(0,0,0,.35), 0 0 30px rgba(168,85,247,.08); }
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal { opacity: 1; filter: none; transform: none; }
+  .floating-code, .preloader p span { animation: none; }
+  .reference-hero h1 b::after { display: none; }
+}

@@ -1,0 +1,24 @@
+<section class="featured-work" id="work" aria-labelledby="work-title" data-horizontal-work>
+  <div class="featured-work__sticky" data-work-sticky>
+    <header class="featured-work__heading shell">
+      <p class="eyebrow">Selected projects</p>
+      <h2 id="work-title">My <span>Work</span></h2>
+    </header>
+    <section class="work-panels" data-work-viewport tabindex="0" aria-label="Featured projects. Scroll down to move through the projects horizontally.">
+      <div class="work-panels__track" data-work-track>
+        <% featuredProjects.forEach((project, index) => { %>
+          <%- include('../partials/featured-project', { project, index }) %>
+        <% }) %>
+        <article class="work-panel work-panel--cta" data-work-slide>
+          <div class="work-panel__cta-content">
+            <p class="eyebrow">Want to see more?</p>
+            <h3>Explore all<br><%= projects.length %> projects.</h3>
+            <p>Browse the complete collection by industry and technology.</p>
+            <a class="neon-button" href="/work">See all work <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div>
+</section>
+<script src="/js/work-showcase.js" defer></script>

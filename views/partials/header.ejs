@@ -1,0 +1,11 @@
+<header class="floating-header" data-header>
+  <a class="floating-brand" href="/" aria-label="<%= site.name %>, home"><%= site.shortName %><span>.</span></a>
+  <nav class="floating-nav" id="site-navigation" aria-label="Primary navigation" data-navigation>
+    <span class="nav-glow" aria-hidden="true"></span>
+    <a href="/#home" data-section-link="home"><span aria-hidden="true">⌂</span><b>Home</b></a>
+    <a href="/#about" data-section-link="about"><span aria-hidden="true">◎</span><b>About</b></a>
+    <a href="/#work"<% if (currentPath === '/work' || currentPath.startsWith('/work/')) { %> aria-current="true" class="is-active"<% } %> data-section-link="work"><span aria-hidden="true">◇</span><b>Projects</b></a>
+    <a href="/#skills" data-section-link="skills"><span aria-hidden="true">✦</span><b>Skills</b></a>
+  </nav>
+</header>
+<div class="scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>

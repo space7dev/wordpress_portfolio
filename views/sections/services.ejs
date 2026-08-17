@@ -1,0 +1,19 @@
+<section class="section reference-section services" id="services" aria-labelledby="services-title">
+  <div class="shell">
+    <header class="reference-heading reference-heading--center scroll-reveal">
+      <p class="eyebrow">How I can help</p>
+      <h2 id="services-title">One partner. <span>The whole picture.</span></h2>
+    </header>
+    <div class="service-grid">
+      <% services.forEach((service) => { %>
+        <article class="glass-panel service-card scroll-reveal">
+          <span class="service-card__number"><%= service.number %></span>
+          <h3><%= service.title %></h3>
+          <p><%= service.description %></p>
+          <ul><% service.deliverables.forEach((item) => { %><li><%= item %></li><% }) %></ul>
+        </article>
+      <% }) %>
+    </div>
+  </div>
+</section>
+

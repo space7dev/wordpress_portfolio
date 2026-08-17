@@ -1,0 +1,30 @@
+<%- include('partials/head') %>
+<%- include('partials/ambient-background') %>
+<div id="top"></div>
+<%- include('partials/header') %>
+<main class="all-work-page" id="main-content">
+  <header class="all-work-header shell">
+    <a class="back-link" href="/#work">← Back to home</a>
+    <p class="eyebrow">Complete portfolio</p>
+    <h1>All <span>work.</span></h1>
+    <p>Explore all <%= projects.length %> projects across agencies, real estate, hospitality, finance, Web3, software, and telecommunications.</p>
+  </header>
+  <section class="all-work-collection shell" aria-label="Project collection">
+    <div class="filter-row" role="group" aria-label="Filter projects" data-filters>
+      <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All work</button>
+      <button class="filter-button" type="button" data-filter="agency" aria-pressed="false">Agencies</button>
+      <button class="filter-button" type="button" data-filter="real-estate" aria-pressed="false">Real Estate</button>
+      <button class="filter-button" type="button" data-filter="hospitality" aria-pressed="false">Hospitality</button>
+      <button class="filter-button" type="button" data-filter="fintech" aria-pressed="false">Finance &amp; Web3</button>
+      <button class="filter-button" type="button" data-filter="software" aria-pressed="false">Software &amp; Telecom</button>
+    </div>
+    <p class="screen-reader-text" role="status" aria-live="polite" data-filter-status>Showing all <%= projects.length %> projects.</p>
+    <div class="project-grid" data-project-grid>
+      <% projects.forEach((project) => { %><%- include('partials/project-card', { project }) %><% }) %>
+    </div>
+    <p class="filter-empty" data-filter-empty hidden>No projects match this filter yet.</p>
+  </section>
+</main>
+<script src="/js/project-filter.js" defer></script>
+<%- include('partials/footer') %>
+

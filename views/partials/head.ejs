@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= seo.title %></title>
+  <meta name="description" content="<%= seo.description %>">
+  <% if (seo.noIndex) { %><meta name="robots" content="noindex, follow"><% } %>
+  <link rel="canonical" href="<%= seo.canonical %>">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="<%= seo.title %>">
+  <meta property="og:description" content="<%= seo.description %>">
+  <meta property="og:url" content="<%= seo.canonical %>">
+  <meta property="og:image" content="<%= seo.image %>">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#08070d">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/devhq-theme.css">
+  <link rel="stylesheet" href="/css/devhq-components.css">
+  <link rel="stylesheet" href="/css/project-gallery.css">
+  <link rel="stylesheet" href="/css/featured-work.css">
+  <link rel="stylesheet" href="/css/motion.css">
+  <script src="/js/navigation.js" defer></script>
+  <script src="/js/ambient-background.js" defer></script>
+  <script src="/js/portfolio-motion.js" defer></script>
+  <script src="/js/section-navigation.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>

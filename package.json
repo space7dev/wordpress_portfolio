@@ -1,0 +1,25 @@
+{
+  "name": "wp-craft-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A Node.js portfolio website for a WordPress developer.",
+  "type": "module",
+  "scripts": {
+    "build": "node init && npm run check",
+    "dev": "node init && node --watch src/server.js",
+    "start": "node init && node src/server.js",
+    "test": "node --test",
+    "check": "node --check src/server.js && node --check public/js/navigation.js && node --check public/js/project-filter.js && node --check public/js/ambient-background.js && node --check public/js/portfolio-motion.js && node --check public/js/section-navigation.js && node --check public/js/skill-filter.js && node --check public/js/work-showcase.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "html-validate": "^11.6.2",
+    "jsdom": "^30.0.1"
+  }
+}

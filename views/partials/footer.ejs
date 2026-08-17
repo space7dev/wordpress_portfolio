@@ -1,0 +1,27 @@
+<footer class="site-footer">
+  <div class="shell site-footer__grid">
+    <div>
+      <a class="footer-brand" href="/"><span><%= site.shortName %></span><%= site.name %></a>
+      <p><%= site.role %>.</p>
+    </div>
+    <div class="footer-links">
+      <p class="mini-label">Navigate</p>
+      <a href="/#work">Projects</a>
+      <a href="/#skills">Skills</a>
+    </div>
+  </div>
+  <div class="shell site-footer__base">
+    <span>© <%= new Date().getFullYear() %> <%= site.name %></span>
+    <span>Designed with intention · Built with Node.js</span>
+    <a href="#top">Back to top ↑</a>
+  </div>
+</footer>
+<script type="application/ld+json"><%- JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: site.name,
+  jobTitle: site.role,
+  url: seo.siteUrl
+}) %></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<article class="work-panel <%= index % 2 === 1 ? 'work-panel--reverse' : '' %>" data-work-slide>
+  <div class="work-panel__info">
+    <div class="work-panel__identity">
+      <span class="work-panel__number"><%= String(index + 1).padStart(2, '0') %></span>
+      <div>
+        <h3><a href="/work/<%= project.slug %>"><%= project.title %></a></h3>
+        <p><%= project.type %></p>
+      </div>
+    </div>
+    <div class="work-panel__tools">
+      <h4>Tools and features</h4>
+      <p><%= project.stack.join(', ') %></p>
+    </div>
+  </div>
+  <a class="work-panel__image" href="/work/<%= project.slug %>" tabindex="-1" aria-hidden="true">
+    <img src="<%= project.screenshot %>" alt="" width="1200" height="800" loading="<%= index === 0 ? 'eager' : 'lazy' %>"<% if (index === 0) { %> fetchpriority="high"<% } %>>
+  </a>
+</article>
+
